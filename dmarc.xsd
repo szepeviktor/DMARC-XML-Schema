@@ -58,11 +58,13 @@
     <!-- The policy to apply to messages from the domain. -->
     <xs:element name="p" type="DispositionType"/>
     <!-- The policy to apply to messages from subdomains. -->
-    <xs:element name="sp" type="DispositionType"/>
+    <xs:element name="sp" type="DispositionType"
+                minOccurs="0"/>
     <!-- The percent of messages to which policy applies. -->
     <xs:element name="pct" type="xs:integer"/>
     <!-- Failure reporting options in effect. -->
-    <xs:element name="fo" type="xs:string"/>
+    <xs:element name="fo" type="xs:string"
+                minOccurs="0"/>
   </xs:all>
 </xs:complexType>
 
