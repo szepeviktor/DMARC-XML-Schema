@@ -13,10 +13,19 @@ example-report.xml validates
 ## The relaxed schema
 
 ```diff
-@@ -65,6 +65,9 @@
+@@ -58,11 +58,16 @@
+     <!-- The policy to apply to messages from the domain. -->
+     <xs:element name="p" type="DispositionType"/>
+     <!-- The policy to apply to messages from subdomains. -->
+-    <xs:element name="sp" type="DispositionType"/>
++    <xs:element name="sp" type="DispositionType"
++                minOccurs="0"/>
+     <!-- The percent of messages to which policy applies. -->
+     <xs:element name="pct" type="xs:integer"/>
      <!-- Failure reporting options in effect. -->
-     <xs:element name="fo" type="xs:string"
-                 minOccurs="0"/>
+-    <xs:element name="fo" type="xs:string"/>
++    <xs:element name="fo" type="xs:string"
++                minOccurs="0"/>
 +    <!-- RFC9091: Requested Mail Receiver policy for non-existent subdomains. -->
 +    <xs:element name="np" type="xs:string"
 +                minOccurs="0"/>
